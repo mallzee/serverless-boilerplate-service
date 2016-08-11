@@ -1,0 +1,16 @@
+{
+  "rules": {
+    // Stop complaints about requiring dev deps in test
+    "import/no-extraneous-dependencies": "off",
+
+    // Stop complaints about should syntax
+    "no-unused-expressions": "off",
+
+    // doesn't work in node v4 :(
+    "strict": "off",
+    "prefer-rest-params": "off",
+  },
+  "env": {
+       "mocha": true
+   }
+}
