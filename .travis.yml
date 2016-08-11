@@ -14,6 +14,7 @@ env:
   - GECKOBOARD_WIDGET_KEY: 32629-cb51fde0-41ef-0134-97f3-22000bdb45ae
   - secure: JPUxV6iJPJwfhMeKzEghhIvZ6b5HAgDFlL+ackXwxQM72h01bsYyklHlZfJixlDxcor9kOvonw6JTu7rLnhf5fXB+k9kZF8gLY+2wRWE2/e6LR/B6wlSJfTGvNZeBFRs4pERc7XA4CcBN/18EWIkYMZemdEgdNzf0Ys8OAha9rmHZJOoHQrdFg4FdVVdeqIdMtA96qeW0Q22DEKuDt7tzRGGGbNYz5L+cxp8+t2IMwZ1McBjA1aHVbL5PU4o9CBiOyofwr1kxYg+3OtI6JkLr3kaR4PvnLbyGESSspFewa/AXc7ZjY4D6erqtFkfKZSR34YxE/1LzXTRQ8bXZVUKi3vC8sPnojj09OeG3fndOrFmEmFRT7ysNgQpCifp9H34L+ZZam9GwTuYZQ74bMEan8XYwdqLKgW4U3CrpUGTNeqafsnkDZpbP4ivPu6qP+OcNdQpJcnk9QqxPHkXHJZ4h3YyW0sgLpKYJPCbsrQ3UiFqkS2/xVQDexn+bG/b84iJBeGijaIYArVEZDBXkZ7GD4gpDwZBSM563MW+QzVmj6inWECE+luj/aVYj9RSw0zc+JRaWOutH6Q48Tvc8FpZp47xZLfl0R85L6BPInc46hX7PLxjjv/TGvvjn5d6ahknCsB1NPc/KLd8LRpCF+bPGtRm8j5dGIf2gQHzNLyYCx4=
 before_install:
+- npm install -g npm@3
 - npm install @mallzee/travis-notify-geckoboard
 - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run geckoboard-start; fi
 before_script:
