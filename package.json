@@ -21,7 +21,7 @@
     "ghooks": "^1.3.2",
     "githook": "0.0.1",
     "istanbul": "^0.4.4",
-    "mocka": "0.0.1",
+    "mocha": "^3.0.2",
     "semantic-release": "^4.3.5",
     "serverless": "^1.0.0-beta.1.1",
     "sinon": "^1.17.5"
@@ -30,7 +30,7 @@
     "geckoboard-start": "travis-notify-geckoboard -a $GECKOBOARD_API_KEY -w $GECKOBOARD_WIDGET_KEY -s",
     "geckoboard": "travis-notify-geckoboard -a $GECKOBOARD_API_KEY -w $GECKOBOARD_WIDGET_KEY",
     "lint": "eslint .",
-    "test": "npm run lint && istanbul cover _mocha test/*.js -- -r test/common.js -R spec --recursive",
+    "test": "npm run lint && istanbul cover mocha test/*.js -- -r test/common.js -R spec --recursive",
     "deploy": "npm test && sls deploy --stage $1"
   },
   "config": {
