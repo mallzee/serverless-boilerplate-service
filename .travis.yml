@@ -23,7 +23,7 @@ script:
 - npm test
 - STAGE=$([ "$TRAVIS_BRANCH" == "master"] && echo "prod" || echo "dev")
 after_success:
-- if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run semantic-release; npm run deploy $STAGE; fi
+- if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run semantic-release; echo "Deploying stage $STAGE"; npm run deploy $STAGE; fi
 after_script:
 - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then npm run geckoboard; fi
 branches:

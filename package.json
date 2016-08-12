@@ -31,7 +31,8 @@
     "geckoboard": "travis-notify-geckoboard -a $GECKOBOARD_API_KEY -w $GECKOBOARD_WIDGET_KEY",
     "lint": "eslint .",
     "test": "npm run lint && istanbul cover mocha test/*.js -- -r test/common.js -R spec --recursive",
-    "deploy": "npm test && sls deploy --stage $1"
+    "deploy": "npm test && sls deploy --stage $1",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "config": {
     "ghooks": {
