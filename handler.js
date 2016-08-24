@@ -1,5 +1,6 @@
 'use strict';
 
+/* eslint import/no-extraneous-dependencies:0 */
 const AWS = require('aws-sdk');
 
 const dynamo = new AWS.DynamoDB.DocumentClient();

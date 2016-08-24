@@ -4,8 +4,6 @@
   "description": "Mallzee Serverless boilerplate project",
   "main": "handler.js",
   "dependencies": {
-    "aws-sdk": "^2.4.13",
-    "jsonwebtoken": "^7.1.7"
   },
   "devDependencies": {
     "@mallzee/travis-notify-geckoboard": "^1.1.0",
