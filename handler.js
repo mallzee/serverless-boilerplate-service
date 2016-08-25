@@ -5,11 +5,16 @@ const AWS = require('aws-sdk');
 
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
+const serviceName = 'serverless-boilerplate';
+
 // Your first function handler
 module.exports.hello = (event, context, cb) => {
 
+  // Get the stage out of the function name... for now.
+  const stage = context.functionName.replace(`${serviceName}-`, '').split('-')[0];
+
   const params = {
-    TableName: 'serverless-boilerplate-table',
+    TableName: `${stage}-serverless-boilerplate`,
     Item: {
       message: 'Go Serverless v1.0! Your function executed successfully!'
     }

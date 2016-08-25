@@ -47,7 +47,7 @@ resources:
         DynamoDBBoilerplateTable:
             Type: AWS::DynamoDB::Table
             Properties:
-                TableName: serverless-boilerplate-table
+                TableName: ${stage}-serverless-boilerplate
                 AttributeDefinitions:
                     -
                         AttributeName: message
@@ -72,7 +72,7 @@ resources:
                           Action:
                             - dynamodb:GetItem
                             - dynamodb:PutItem
-                          Resource: "arn:aws:dynamodb:*:*:table/serverless-boilerplate-table"
+                          Resource: "arn:aws:dynamodb:*:*:table/${stage}-serverless-boilerplate"
                 Roles:
                   -
                       Ref: IamRoleLambda
